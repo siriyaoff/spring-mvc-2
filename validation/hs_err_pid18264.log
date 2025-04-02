@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 264241152 bytes for Failed to commit area from 0x0000000704e00000 to 0x0000000714a00000 of length 264241152.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3269), pid=18264, tid=12248
+#
+# JRE version:  (11.0+28) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11+28, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=x-windows-949 -Duser.country=KR -Duser.language=ko -Duser.variant -agentpath:C:/PROGRA~1/DYNATR~1/oneagent/agent/bin/129753~1.202/WINDOW~2/oneagentjava.dll=loglevelcon=none,datastorage=C:\ProgramData\dynatrace\oneagent\datastorage,logdir=C:/ProgramData/dynatrace/oneagent/log hello.itemservice.ItemServiceApplication
+
+Host: 12th Gen Intel(R) Core(TM) i5-1240P, 16 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2364)
+Time: Wed Apr  2 16:16:01 2025 대한민국 표준시 elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000021d11f14000):  JavaThread "Unknown thread" [_thread_in_vm, id=12248, stack(0x0000008619400000,0x0000008619500000)]
+
+Stack: [0x0000008619400000,0x0000008619500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x63adaa]
+V  [jvm.dll+0x77852f]
+V  [jvm.dll+0x779b18]
+V  [jvm.dll+0x77a1d3]
+V  [jvm.dll+0x2624c8]
+V  [jvm.dll+0x63825a]
+V  [jvm.dll+0x62cb15]
+V  [jvm.dll+0x31563c]
+V  [jvm.dll+0x3154c2]
+V  [jvm.dll+0x31ad36]
+V  [jvm.dll+0x36726f]
+V  [jvm.dll+0x366c90]
+V  [jvm.dll+0x2f2378]
+V  [jvm.dll+0x2f34d6]
+V  [jvm.dll+0x7517d7]
+V  [jvm.dll+0x752f1f]
+V  [jvm.dll+0x374099]
+V  [jvm.dll+0x738059]
+V  [jvm.dll+0x3e35fd]
+V  [jvm.dll+0x3e5961]
+C  [oneagentproc.dll+0xb286]
+C  [oneagentproc.dll+0x11c82]
+C  [java.exe+0x3603]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x17614]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000021d0f2618f0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000021d11f66800 GCTaskThread "GC Thread#0" [stack: 0x000000861a400000,0x000000861a500000] [id=4872]
+  0x0000021d11f7f800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000861a500000,0x000000861a600000] [id=5740]
+  0x0000021d11f5b800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000861a600000,0x000000861a700000] [id=21880]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffa0b110d37]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000021d11b8a2d0] Heap_lock - owner thread: 0x0000021d11f14000
+
+Heap address: 0x0000000704e00000, size: 4018 MB, Compressed Oops mode: Non-zero based: 0x0000000704e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6a9cc0000 - 0x00007ff6a9d05000 	C:\Program Files\Java\jdk-11\bin\java.exe
+0x00007ffa61230000 - 0x00007ffa61428000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffa5fb00000 - 0x00007ffa5fbbf000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffa5edb0000 - 0x00007ffa5f082000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffa5f810000 - 0x00007ffa5f9b1000 	C:\windows\System32\USER32.dll
+0x00007ffa5e9c0000 - 0x00007ffa5e9e2000 	C:\windows\System32\win32u.dll
+0x00007ffa60c60000 - 0x00007ffa60c8b000 	C:\windows\System32\GDI32.dll
+0x00007ffa5eca0000 - 0x00007ffa5edaf000 	C:\windows\System32\gdi32full.dll
+0x00007ffa5e920000 - 0x00007ffa5e9bd000 	C:\windows\System32\msvcp_win.dll
+0x00007ffa5f140000 - 0x00007ffa5f240000 	C:\windows\System32\ucrtbase.dll
+0x00007ffa49570000 - 0x00007ffa4980a000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffa60fd0000 - 0x00007ffa6106e000 	C:\windows\System32\msvcrt.dll
+0x00007ffa605b0000 - 0x00007ffa605e2000 	C:\windows\System32\IMM32.DLL
+0x00007ffa5e0d0000 - 0x00007ffa5e3b0000 	C:\Program Files\dynatrace\oneagent\agent\bin\1.297.53.20240820-121511\windows-x86-64\oneagentproc.dll
+0x00007ffa61140000 - 0x00007ffa611ee000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffa5f770000 - 0x00007ffa5f80c000 	C:\windows\System32\sechost.dll
+0x00007ffa60c90000 - 0x00007ffa60db5000 	C:\windows\System32\RPCRT4.dll
+0x00007ffa60720000 - 0x00007ffa6078b000 	C:\windows\System32\WS2_32.dll
+0x00007ffa56ba0000 - 0x00007ffa56bb6000 	C:\Program Files\Java\jdk-11\bin\vcruntime140.dll
+0x00007ffa2f550000 - 0x00007ffa2f5fa000 	C:\Program Files\Java\jdk-11\bin\msvcp140.dll
+0x00007ffa0ae10000 - 0x00007ffa0b951000 	C:\Program Files\Java\jdk-11\bin\server\jvm.dll
+0x00007ffa5faf0000 - 0x00007ffa5faf8000 	C:\windows\System32\PSAPI.DLL
+0x00007ffa4b2f0000 - 0x00007ffa4b2fa000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffa5b5f0000 - 0x00007ffa5b617000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffa48190000 - 0x00007ffa48199000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffa5c4e0000 - 0x00007ffa5c4f2000 	C:\windows\SYSTEM32\kernel.appcore.dll
+0x00007ffa56980000 - 0x00007ffa56991000 	C:\Program Files\Java\jdk-11\bin\verify.dll
+0x00007ffa5aeb0000 - 0x00007ffa5b094000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007ffa59ff0000 - 0x00007ffa5a025000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007ffa5e9f0000 - 0x00007ffa5ea72000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffa56b10000 - 0x00007ffa56b38000 	C:\Program Files\Java\jdk-11\bin\java.dll
+0x00007ffa001c0000 - 0x00007ffa01a9c000 	C:\PROGRA~1\DYNATR~1\oneagent\agent\bin\129753~1.202\WINDOW~2\oneagentjava.dll
+0x00007ffa5fc30000 - 0x00007ffa60374000 	C:\windows\System32\SHELL32.dll
+0x00007ffa5f9c0000 - 0x00007ffa5faea000 	C:\windows\System32\ole32.dll
+0x00007ffa5f410000 - 0x00007ffa5f765000 	C:\windows\System32\combase.dll
+0x00007ffa60650000 - 0x00007ffa6071d000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffa48010000 - 0x00007ffa4801c000 	C:\windows\SYSTEM32\Secur32.dll
+0x00007ffa5f240000 - 0x00007ffa5f267000 	C:\windows\System32\bcrypt.dll
+0x00007ffa5da10000 - 0x00007ffa5da4b000 	C:\windows\SYSTEM32\IPHLPAPI.DLL
+0x00007ffa5e3d0000 - 0x00007ffa5e41b000 	C:\windows\SYSTEM32\POWRPROF.dll
+0x00007ffa5e810000 - 0x00007ffa5e842000 	C:\windows\SYSTEM32\SSPICLI.DLL
+0x00007ffa5dfa0000 - 0x00007ffa5dfac000 	C:\windows\SYSTEM32\CRYPTBASE.DLL
+0x00007ffa5e3b0000 - 0x00007ffa5e3c2000 	C:\windows\SYSTEM32\UMPDC.dll
+0x00007ffa39f40000 - 0x00007ffa39f57000 	C:\windows\system32\napinsp.dll
+0x00007ffa39f60000 - 0x00007ffa39f7b000 	C:\windows\system32\pnrpnsp.dll
+0x00007ffa39c50000 - 0x00007ffa39c65000 	C:\windows\system32\wshbth.dll
+0x00007ffa59b40000 - 0x00007ffa59b5d000 	C:\windows\system32\NLAapi.dll
+0x00007ffa5dd90000 - 0x00007ffa5ddfa000 	C:\windows\System32\mswsock.dll
+0x00007ffa5da50000 - 0x00007ffa5db1a000 	C:\windows\SYSTEM32\DNSAPI.dll
+0x00007ffa60dc0000 - 0x00007ffa60dc8000 	C:\windows\System32\NSI.dll
+0x00007ffa39c30000 - 0x00007ffa39c42000 	C:\windows\System32\winrnr.dll
+0x00007ffa5d760000 - 0x00007ffa5d793000 	C:\windows\SYSTEM32\ntmarta.dll
+0x00007ffa59280000 - 0x00007ffa59297000 	C:\windows\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffa592c0000 - 0x00007ffa592dd000 	C:\windows\SYSTEM32\dhcpcsvc.DLL
+0x00007ffa5df80000 - 0x00007ffa5df98000 	C:\windows\SYSTEM32\CRYPTSP.dll
+0x00007ffa5d640000 - 0x00007ffa5d674000 	C:\windows\system32\rsaenh.dll
+0x00007ffa57c60000 - 0x00007ffa57c6a000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffa56bc0000 - 0x00007ffa56bd6000 	C:\Program Files\Java\jdk-11\bin\zip.dll
+0x00007ffa58640000 - 0x00007ffa5864a000 	C:\Program Files\Java\jdk-11\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-11\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\dynatrace\oneagent\agent\bin\1.297.53.20240820-121511\windows-x86-64;C:\Program Files\Java\jdk-11\bin\server;C:\PROGRA~1\DYNATR~1\oneagent\agent\bin\129753~1.202\WINDOW~2
+
+VM Arguments:
+jvm_args: -Dfile.encoding=x-windows-949 -Duser.country=KR -Duser.language=ko -Duser.variant -agentpath:C:/PROGRA~1/DYNATR~1/oneagent/agent/bin/129753~1.202/WINDOW~2/oneagentjava.dll=loglevelcon=none,datastorage=C:\ProgramData\dynatrace\oneagent\datastorage,logdir=C:/ProgramData/dynatrace/oneagent/log 
+java_command: hello.itemservice.ItemServiceApplication
+java_class_path (initial): C:\Users\User\Desktop\spring-mvc-2\validation\build\classes\java\main;C:\Users\User\Desktop\spring-mvc-2\validation\build\resources\main;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-thymeleaf\2.4.4\b6cfa0786720394dea233a85c06774bae4f26732\spring-boot-starter-thymeleaf-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-web\2.4.4\8b84b6800a0b72d644d77aea3df0bf02008096a7\spring-boot-starter-web-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-json\2.4.4\3f9622c37d6ece1cbf5889aee688adbcc78ddeea\spring-boot-starter-json-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter\2.4.4\5807f7ab098711f28d7d92c5986c6c5cfd82e996\spring-boot-starter-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.thymeleaf\thymeleaf-spring5\3.0.12.RELEASE\aa640b214411978a23cbe271c3fb9569d1bda608\thymeleaf-spring5-3.0.12.RELEASE.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.thymeleaf.extras\thymeleaf-extras-java8time\3.0.4.RELEASE\36e7175ddce36c486fff4578b5af7bb32f54f5df\thymeleaf-extras-java8time-3.0.4.RELEASE.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-starter-tomcat\2.4.4\80f3a79a16d80639741f35034364fc30c6e9016a\spring-boot-starter-tomcat-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework\spring-webmvc\5.3.5\449649af0eda09def9b5748bc8438253bf02f9f3\spring-webmvc-5.3.5.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework\spring-web\5.3.5\8233c67b3f33f619f6f8f34cc0f56e01a00e136e\spring-web-5.3.5.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.boot\spring-boot-autoconfigure\2.4.4\6237b28c1bad51b175e5b91222292924322fda54\spring-boot-autoconfigure-2.4.4.jar;C:\Users\User\.gradle\caches\modules-2\files-2.1\org.springframework.bo
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 264241152                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4213178368                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7591728                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122033256                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122033256                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Ruby32-x64\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\MinGW\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\Users\User\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Bandizip\;C:\Users\User\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\User\AppData\Roaming\npm
+USERNAME=hwyang
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.2364)
+
+CPU:total 16 (initial active 16) (8 cores per cpu, 2 threads per core) family 6 model 154 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 16066M (1458M free)
+TotalPageFile size 16066M (AvailPageFile size 226M)
+current process WorkingSet (physical memory assigned to process): 36M, peak: 36M
+current process commit charge ("private bytes"): 86M, peak: 338M
+
+vm_info: OpenJDK 64-Bit Server VM (11+28) for windows-amd64 JRE (11+28), built on Aug 23 2018 03:04:58 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
