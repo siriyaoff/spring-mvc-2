@@ -28,7 +28,6 @@ public class TestDataInit {
         member.setLoginId("test");
         member.setPassword("test!");
         member.setName("테스터");
-        System.out.println("System.getProperty(\"file.encoding\") = " + System.getProperty("file.encoding"));
 
         memberRepository.save(member);
     }
